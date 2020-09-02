@@ -1,0 +1,121 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebTintuc.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+                    <img alt="" src="banner.jpg" />
+        </div>
+        <table>
+            <tr>
+                <td valign="top">
+                    <div class="leftCol">
+                        <table id="tbl_dangnhap" runat="server">
+                            <tr>
+                                <td><label id="lbl_taikhoan" runat="server">Tài khoản:</label> </td>
+                                <td>
+                                    <asp:TextBox ID="txt_username" runat="server" Width="120px"></asp:TextBox>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label id="lbl_matkhau" runat="server">Mật khẩu:</label> </td>
+                                <td>
+                                    <asp:TextBox ID="txt_password" runat="server" Width="120px" TextMode="Password"></asp:TextBox>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" align="center">
+                                    <asp:Button ID="btn_dangnhap" runat="server" Text="Đăng nhập" Width="95px" 
+                                        onclick="btn_dangnhap_Click" ValidationGroup="dangnhap"/>
+                                    <asp:Button ID="btn_dangky" runat="server" Text="Đăng ký" Width="95px" 
+                                        onclick="btn_dangky_Click" />
+                                </td>    
+                            </tr>
+                            <tr>
+                                <td colspan="2" align="center">
+                                    <asp:Button ID="btn_dangxuat" runat="server" Text="Đăng xuất" Width="95px" 
+                                        onclick="btn_dangxuat_Click"/>
+                                    <asp:Button ID="btn_tuychon" runat="server" Text="Thông tin" Width="95px" 
+                                        onclick="btn_tuychon_Click" />
+                                </td>    
+                            </tr>
+                            <tr>
+                            <td colspan="2" align="center">
+                                    <asp:Button ID="btn_vietbai" runat="server" Text="Viết bài" Width="95px" 
+                                        onclick="btn_vietbai_Click"/>
+                                    <asp:Button ID="btn_theodoi" runat="server" Text="Theo dõi" Width="95px" 
+                                        onclick="btn_theodoi_Click1"/>
+                                </td>  
+                            </tr>
+                             <tr>
+                            <td colspan="2" align="center">
+                                    <asp:Button ID="btn_duyetbai" runat="server" Text="Duyệt bài" Width="95px" 
+                                        onclick="btn_duyetbai_Click"/>
+                                    <asp:Button ID="btn_thanhvien" runat="server" Text="Thành viên" Width="95px" 
+                                        onclick="btn_thanhvien_Click"/>
+                                </td>  
+                            </tr>
+                            <tr>
+                                <td colspan="2" align="center">
+                                    <asp:Button ID="btn_timkiem" runat="server" Text="Tìm kiếm" Width="95px" 
+                                        onclick="btn_timkiem_Click"  />
+                                    <asp:Button ID="btn_timkiemnangcao" runat="server" Text="Nâng cao" Width="95px" 
+                                        onclick="btn_timkiemnangcao_Click"  />
+                                    <br />
+                                    <asp:TextBox ID="txt_timkiem" runat="server" Width="185px"></asp:TextBox>
+                                </td>                                
+                            </tr>
+                            <tr>
+                                <td colspan="4" align="center">    
+                                    <asp:Label ID="lb_thongtin" runat="server" Text="" ForeColor="Red"></asp:Label>
+                                </td>
+                            </tr>                                
+                            <tr>
+                                <td colspan="4" align="center">    
+                                    <asp:RequiredFieldValidator ID="vl_taikhoan" runat="server" ErrorMessage="Chưa nhập tên tài khoản!" ControlToValidate="txt_username" ValidationGroup="dangnhap" ForeColor="Red"></asp:RequiredFieldValidator>
+                                    
+                                </td>
+                            </tr>   
+                            <tr>
+                                <td colspan="4" align="center">
+                                     <asp:RequiredFieldValidator ID="vl_matkhau" runat="server" ErrorMessage="Chưa nhập mật khẩu!" ControlToValidate="txt_password" ValidationGroup="dangnhap" ForeColor="Red"></asp:RequiredFieldValidator>
+                                </td>
+                            </tr> 
+                        </table>
+                        <ul>
+                    <li><a href="trangchu.aspx">Trang chủ</a></li>
+                    <li><a href="xahoi.aspx">Xã hội</a></li>
+                    <li><a href="thegioi.aspx">Thế giới</a></li>
+                    <li><a href="thethao.aspx">Thể thao</a></li>
+                    <li><a href="giaitri.aspx">Giải trí</a></li>
+                </ul>  
+                    </div>
+                </td>
+                <td valign="top">
+                    <div class="main">
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="footer">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+            Hoa Sen News
+        </div>
+    </div>
+    </form>
+</body>
+</html>

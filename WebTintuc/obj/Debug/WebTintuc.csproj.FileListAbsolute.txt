@@ -1,0 +1,5 @@
+D:\Homework\WebTintuc\WebTintuc\bin\WebTintuc.dll
+D:\Homework\WebTintuc\WebTintuc\bin\WebTintuc.pdb
+D:\Homework\WebTintuc\WebTintuc\obj\Debug\ResolveAssemblyReference.cache
+D:\Homework\WebTintuc\WebTintuc\obj\Debug\WebTintuc.dll
+D:\Homework\WebTintuc\WebTintuc\obj\Debug\WebTintuc.pdb
